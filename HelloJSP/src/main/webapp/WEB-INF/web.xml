@@ -15,10 +15,20 @@
   	<servlet-name>MyFirstServlet</servlet-name>
   	<servlet-class>HelloServlet</servlet-class>
   </servlet>
+  
+  <servlet>
+  	<servlet-name>LifeCycleCheck</servlet-name>
+  	<servlet-class>LifeCycleServlet</servlet-class>
+  </servlet>
 
   <!-- 서블릿 매핑 정보 등록 -->
   <servlet-mapping>
   	<servlet-name>MyFirstServlet</servlet-name>
   	<url-pattern>/hs</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>LifeCycleCheck</servlet-name>
+  	<url-pattern>/life</url-pattern>
   </servlet-mapping>
 </web-app>
