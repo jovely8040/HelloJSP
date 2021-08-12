@@ -9,4 +9,16 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <!-- 서블릿 정보 등록 -->
+  <servlet>
+  	<servlet-name>MyFirstServlet</servlet-name>
+  	<servlet-class>HelloServlet</servlet-class>
+  </servlet>
+
+  <!-- 서블릿 매핑 정보 등록 -->
+  <servlet-mapping>
+  	<servlet-name>MyFirstServlet</servlet-name>
+  	<url-pattern>/hs</url-pattern>
+  </servlet-mapping>
 </web-app>
