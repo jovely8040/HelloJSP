@@ -17,8 +17,8 @@ public class LifeCycleServlet extends HttpServlet {
 		String dbuser = context.getInitParameter("dbuser");
 		String dbpass = context.getInitParameter("dbpass");
 		
-		System.out.println("컨켁스트 파라미터 dbuser:" + dbuser);
-		System.out.println("컨켁스트 파라미터 dbpass:" + dbpass);
+		System.out.println("컨텍스트 파라미터 dbuser:" + dbuser);
+		System.out.println("컨텍스트 파라미터 dbpass:" + dbpass);
 	}
 
 	@Override
