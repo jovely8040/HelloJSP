@@ -67,11 +67,34 @@ public class EmaillistServlet extends HttpServlet {
 //		//	FORWARD
 //		rd.forward(req, resp);
 		
-		if ("add".equals(actionName)) {
+		if ("add".equals(actionName)) {	//	a=add
+			String firstName = req.getParameter("first_name");
+			String lastName = req.getParameter("last_name");
+			String email = req.getParameter("email");
+
+			//	VO 객체 생성
+			EmailVo vo = new EmailVo();
+			vo.setLastName(lastName);
+			vo.setFirstName(firstName);
+			vo.setEmail(email);
+
 			//	INSERT 처리
+			EmaillistDao dao = new EmaillistDaoImpl();
+			int insertedCount = dao.insert(vo);
+
+			//	처리 후 list페이지로 리다이렉트
+			resp.sendRedirect(req.getContextPath() + "/el");
+		} else if ("delete".equals(actionName)) {
+			//	a=delete면
+			Long no = Long.valueOf(req.getParameter("no"));
+
+			EmaillistDao dao = new EmaillistDaoImpl();
+			int deletedCount = dao.delete(no);
+
+			//	리스트 페이지로 리다이렉트
+			resp.sendRedirect(req.getContextPath() + "/el");
 		} else {
 			doGet(req, resp);
 		}
 	}
-
 }
