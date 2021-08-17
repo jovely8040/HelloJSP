@@ -1,13 +1,10 @@
 <%@page import="com.example.emaillist.vo.EmailVo"%>
 <%@page import="java.util.List"%>
-<%@page import="com.example.emaillist.dao.EmaillistDaoImpl"%>
-<%@page import="com.example.emaillist.dao.EmaillistDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-EmaillistDao dao = new EmaillistDaoImpl();
-//	이메일 리스트 받아오기
-List<EmailVo> list = dao.getList();
+//요청 객체에서 list 속성 받아오기
+List<EmailVo> list = (List<EmailVo>)request.getAttribute("list");
 %>
 <!DOCTYPE html>
 <html>
