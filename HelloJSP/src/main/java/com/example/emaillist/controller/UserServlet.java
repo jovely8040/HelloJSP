@@ -32,6 +32,12 @@ public class UserServlet extends HttpServlet {
 			RequestDispatcher rd =
 				req.getRequestDispatcher("/WEB-INF/views/users/joinsuccess.jsp");
 			rd.forward(req, resp);
+		} else if ("loginform".equals(actionName)) {
+			//	a=loginform
+			//	로그인 폼 페이지로 
+			RequestDispatcher rd =
+				req.getRequestDispatcher("/WEB-INF/views/users/loginform.jsp");
+			rd.forward(req, resp);
 		} else {
 			resp.sendError(404);	//	Page Not Found
 		}
