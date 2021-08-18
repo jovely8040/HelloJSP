@@ -17,7 +17,7 @@ if (cookieValue == null) {
 }
 %>
     
-	<h3>Add Cookie</h3>
+	<h3>Add/Edit Cookie</h3>
 	<form method="POST" action="cookies">
 		<label for="example">Cookie Value</label>
 		<input type="text" name="example" id="example" value="<%= cookieValue %>">
